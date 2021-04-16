@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	
+<head>
+	
+<style>
+
+	body {
+		background-color: darkseagreen;
+		
+		}
+	
+
+	
+	
+	
+</style>	
+	
+<meta charset="UTF-8">
+	
+<title>Untitled Document</title>
+</head>
+
+	
+	
+	
+	
+<body>
+	
+	
+<h2>My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+	
+Click me to display Date and Time.</button>
+
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "oranges made"'>make oranges</button>	
+
+<button type="button" onclick='document.getElementById("demo").innerHTML = "bananas made"'>makes bananas</button>	
+
+		
+<p id="demo">No fruit has yet been made!</p>
+
+	
+
+<h3>Enter your favorite fruit!<h3>
+	
+
+<input type="text" id="myText" value="Enter fruit here...">
+	
+<button onclick="fruitFunction()">Input fruit</button>
+
+
+<script>
+	
+function fruitFunction() 
+	{
+		var x = document.getElementById("myText").value;
+		document.getElementById("demo").innerHTML = x;
+	}
+	
+</script>
+	
+	
+	
+	
+	
+	
+</body>
+	
+	
+</html>
