@@ -39,9 +39,36 @@ Click me to display Date and Time.</button>
 <button type="button" onclick='document.getElementById("demo").innerHTML = "oranges made"'>make oranges</button>	
 
 <button type="button" onclick='document.getElementById("demo").innerHTML = "bananas made"'>makes bananas</button>	
-	
-	
+
+		
 <p id="demo">No fruit has yet been made!</p>
+
+	
+	
+
+
+
+<p>Enter your favorite fruit!</p>
+	
+
+<input type="text" id="myText" value="Enter fruit here...">
+	
+<button onclick="fruitFunction()">Input fruit</button>
+
+<p id="spitOutFruit"></p>
+
+<script>
+	
+function fruitFunction() 
+	{
+		var x = document.getElementById("myText").value;
+		document.getElementById("spitOutFruit").innerHTML = x;
+	}
+	
+</script>
+	
+	
+	
 	
 	
 	
