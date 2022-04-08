@@ -1,0 +1,77 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<meta charset="utf-8">
+
+		<title>Untitled Document</title>
+		
+		<style>
+		
+		body {background: #4B4561; text-align: center; }
+			
+		h1 {color: cornflowerblue; font-size:25px; }  	
+		
+		</style>
+
+	</head>
+
+
+	<body>
+		
+		<h1>This is my new Canvas Project</h1>
+		
+		<canvas id="Canvas" width="600" height="300" style="border:2px solid #49d16d;">
+		Your browser does not support the HTML canvas tag.
+		</canvas>
+		
+		<script>
+			var c = document.getElementById("Canvas");
+			var ctx = c.getContext("2d");
+			
+			function circleMaker (xCoord, yCoord, circRadius)
+			
+			{
+				ctx.beginPath();
+				ctx.arc(xCoord, yCoord, circRadius, 0, 2 * Math.PI); 
+				ctx.stroke();
+				
+			}
+			
+			
+			function rectangleMaker (xCoordrect, yCoordRect, widthRect, heightRect)
+			
+			{
+					ctx.beginPath(); 
+					ctx.rect(xCoordrect, yCoordRect, widthRect, heightRect); 
+					ctx.stroke(); 
+				
+			}
+			
+		     // the head
+			circleMaker(300,150,120);
+				
+			// left eye
+			circleMaker(Math.floor(Math.random() * 600)	,110,20);
+			
+			//right eye
+			circleMaker(340,110,20);
+				
+			
+			//the teeth 
+			rectangleMaker (280, 160, 40, 60);
+		
+			rectangleMaker (260,160, 40, 60);
+			
+			rectangleMaker (300,160,40, 60);
+			
+	
+		</script>
+		
+
+	</body>
+
+
+</html>
