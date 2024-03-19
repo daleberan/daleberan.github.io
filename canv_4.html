@@ -123,12 +123,22 @@
 		var divHeightBottom = document.getElementById("bottomID").clientHeight;
 
 		
-		var websiteWidth = Math.max(document.body["scrollWidth"]);
+		
 		
 		
 		function screenRefresher()
 		{
-		canvas.width= websiteWidth + 100;
+			
+			
+		var websiteWidth = Math.max(
+    						document.documentElement["clientWidth"],
+							document.body["scrollWidth"],
+    						document.documentElement["scrollWidth"],
+    						document.body["offsetWidth"],
+							document.documentElement["offsetWidth"]
+							);
+			
+		canvas.width= websiteWidth;
 		canvas.height=divHeightTop + divHeightCenter + divHeightBottom + 50;	
 		ctx.fillStyle = "#7291ba"
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
