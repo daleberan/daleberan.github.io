@@ -116,15 +116,8 @@
 		
 		var ctx = canvas.getContext("2d");
 		
-		/*gets heights of each of the div elements to use to set the height 
-		for the canvas */
-		var divHeightTop = document.getElementById("topID").clientHeight;
-		var divHeightCenter = document.getElementById("centerID").clientHeight;
-		var divHeightBottom = document.getElementById("bottomID").clientHeight;
-
-		
-		
-		
+	
+	
 		
 		function screenRefresher()
 		{
@@ -138,8 +131,17 @@
 							document.documentElement["offsetWidth"]
 							);
 			
+			
+		var websiteHeight = Math.max(
+    						document.documentElement["clientHeight"],
+							document.body["scrollHeight"],
+    						document.documentElement["scrollHeight"],
+    						document.body["offsetWidth"],
+							document.documentElement["offsetHeight"]
+							);	
+			
 		canvas.width= websiteWidth;
-		canvas.height=divHeightTop + divHeightCenter + divHeightBottom + 50;	
+		canvas.height= websiteHeight;	
 		ctx.fillStyle = "#7291ba"
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 		}
