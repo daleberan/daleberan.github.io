@@ -122,6 +122,8 @@
 		function screenRefresher()
 		{
 			
+		/* gets the maximum out of all these browser screen width measurements, 
+		then the same for the height */
 			
 		var websiteWidth = Math.max(
     						document.documentElement["clientWidth"],
@@ -146,7 +148,7 @@
 		ctx.fillRect(0, 0, canvas.width, canvas.height);
 		}
 		
-		/*
+		
 
 		function CircleDrawerer()
 		{
@@ -157,7 +159,7 @@
 			
 		}
 	
-		*/
+		
 		setInterval(screenRefresher, 10);
 		setInterval(CircleDrawerer, 7);
 		
