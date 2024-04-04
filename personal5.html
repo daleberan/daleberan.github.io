@@ -51,17 +51,16 @@
 		padding-right: 30px;
 		color: white;
 			
-		background-color: #69796C;
-		background-image: linear-gradient(rgb(135,206,227), rgb(73,83,83));
+		background-color: rgb(60,60,60);
 			
-		opacity: 0.9;	
+		opacity: 1;	
 		border-radius: 10px;	
 		
 		}
 		
 		footer
 		{
-			padding-bottom: 20px;
+			padding-bottom: 30px;
 		}
 		
 		
@@ -127,10 +126,7 @@
 	var randomGreen = 205;
 	var randomBlue = 155;	
 	var randomOpacity =0.5;
-		
-	//var randomRedBG = 70;
-	//var randomGreenBG = 30;
-	//var randomBlueBG = 30;
+
 		
 	
 	function findRandoNumber(min, max) {
@@ -179,8 +175,8 @@
 
       class Cell
       {
-          static width = 10;
-          static height = 10;
+          static width = 1;
+          static height = 1;
 
           constructor (context, gridX, gridY)
           {
@@ -197,9 +193,8 @@
           draw() {
               // Draw a simple square
 			
-			
 			  
-              this.context.fillStyle = this.alive? `rgb(${randomRed}, ${randomGreen}, ${randomBlue}, ${randomOpacity})`:'rgb(30,30,30, 0.2)';
+              this.context.fillStyle = this.alive? `rgb(${randomRed}, ${randomGreen}, ${randomBlue}, ${randomOpacity})`:'#303030';
               this.context.fillRect(this.gridX * Cell.width, this.gridY * Cell.height, Cell.width, Cell.height);
           }
       }
@@ -283,16 +278,16 @@
               for (let i = 0; i < this.gameObjects.length; i++) {
                   this.gameObjects[i].draw();
 				  
-				  randomRed = findRandoNumber(60,120);
-				  randomGreen = findRandoNumber(145,205);
-				  randomBlue = findRandoNumber(150,220);
+				  randomRed = findRandoNumber(70,120);
+				  randomGreen = findRandoNumber(203,215);
+				  randomBlue = findRandoNumber(110,140);
 				  randomOpacity = Math.random();
               }
 
               // The loop function has reached it's end, keep requesting new frames
               setTimeout( () => {
                   window.requestAnimationFrame(() => this.gameLoop());
-              }, 1000)
+              }, 100)
           }
       }
 
